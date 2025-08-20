@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.cdnfonts.com/css/allenia");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+body {
+    margin: 0;
+    background-color: #000000;
+    font-family: Poppins;
+    color: #eee;
+}
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#bg_city {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#bg_city svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main-section {
+    position: relative;
+}
+.hero_section {
+    position: absolute;
+    color: #000000;
+    font-weight: 600;
+    content: attr(data-content);
+    -webkit-text-stroke: 1px #d2d2d2;
+    top: 150px;
+    z-index: 2;
+    text-align: center;
+    font-size: 62px;
+    font-family: "Allenia", sans-serif;
+}
+.hero_section p {
+    font-size: 120px;
+    font-weight: 400;
+    font-family: "Bebas Neue", sans-serif;
+    color: transparent;
+    content: attr(data-content);
+    -webkit-text-stroke: 1px #d2d2d2;
+}
+.container {
+    width: 100%;
+    max-width: 1024px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    color: rgb(178, 178, 178);;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.nav h1 {
+    font-size: 18px;
+    color: white;
+}
+.nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    font-size: 14px;
+}
+.nav ul li {
+    cursor: pointer;
+    position: relative;
+    font-size: 14px;
+}/* Pseudo-element for underline */
+
+/* Underline pseudo-element */
+.nav ul li::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: rgb(130, 131, 131);
+    transition: width 0.4s ease-in-out;
+    transform: translateX(-50%);
+}
+/* On hover: underline grows under the text */
+.nav ul li:hover::after {
+    width: 100%;
+}
+.about_containt{
+    padding-top: 50px;
+    text-align: center;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.about_containt span {
+    font-size: 12px;
+}

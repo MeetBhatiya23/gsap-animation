@@ -18,7 +18,7 @@ const Estate = () => {
         const loadAndAnimate = async () => {
             try {
                 // 1. Load SVG
-                const response = await fetch("/public/city.svg");
+                const response = await fetch("/city.svg");
                 const svgText = await response.text();
 
                 if (bgCityRef.current) {
